@@ -1,0 +1,23 @@
+﻿@model List<WebItem>
+
+<nav class="mt-2">
+    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+        <li class="nav-header">Crud İşlemler</li>
+        @foreach (var item in Model)
+        {
+            <li class="nav-item">
+                <a href="@Url.Action(item.ActionName,"Unvan","Admin")" class="nav-link">
+                    <i class="nav-icon far fa-user"></i>
+                    <p>
+                        @item.ActionName
+                    </p>
+                </a>
+            </li>
+        }
+
+ 
+
+
+    </ul>
+</nav>

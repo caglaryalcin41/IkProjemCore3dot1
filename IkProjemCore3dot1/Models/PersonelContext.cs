@@ -20,6 +20,6 @@ namespace IkProjemCore3dot1.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         { 
 
-        }
+        } 
     }
 }

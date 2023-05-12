@@ -12,8 +12,7 @@ namespace IkProjemCore3dot1.Areas.Admin.Controllers
     [Area("Admin")]
     public class PersonelController : Controller
     {
-        PersonelContext db ; 
-
+        PersonelContext db;
         public PersonelController(PersonelContext context)
         {
             db = context;

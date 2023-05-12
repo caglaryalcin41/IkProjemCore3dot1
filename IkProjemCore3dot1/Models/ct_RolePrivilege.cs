@@ -9,5 +9,6 @@ namespace IkProjemCore3dot1.Models
     {
         public int RoleId { get; set; }
         public int WebItemId { get; set; }
+         
     }
 }

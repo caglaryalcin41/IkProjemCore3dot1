@@ -1,7 +1,6 @@
 ﻿@model IkProjemCore3dot1.Models.Personel
 @{
-    ViewBag.Title = "KisiEkleme";
-    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "KisiEkleme"; 
 }
 
 <h2>Merhabalar, Personel Ekleme Sayfası</h2>
@@ -29,3 +28,4 @@
     <button type="submit" class="btn btn-primary">Gönder</button>
 </form>
 
+@await Component.InvokeAsync("Iletisim")

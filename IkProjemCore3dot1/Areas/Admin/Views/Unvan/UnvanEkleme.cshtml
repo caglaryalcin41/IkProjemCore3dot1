@@ -1,7 +1,6 @@
 ﻿@model IkProjemCore3dot1.Models.Unvan
 @{
-    ViewBag.Title = "UnvanEkleme";
-    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "UnvanEkleme"; 
 }
 
 <h2>Merhabalar, Unvan Ekleme Sayfası</h2>
@@ -15,3 +14,13 @@
     <button type="submit" class="btn btn-primary">Gönder</button>
 </form>
 
+
+@section myScript{
+    <script>
+
+        $(ajax:
+        data: teknik Müdür
+        url : /Admin/Unvan/Mysetup
+            type : postMessage)
+    </script>
+}

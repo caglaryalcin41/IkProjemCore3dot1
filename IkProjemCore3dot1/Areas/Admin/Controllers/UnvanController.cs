@@ -69,8 +69,7 @@ namespace IkProjemCore3dot1.Areas.Admin.Controllers
 
         public ActionResult UnvanSil(int Id)
         {
-            Unvan Unvan = db.Unvan.Find(Id);
-            string UnvanListesi = TempData["Unvan"].ToString();
+            Unvan Unvan = db.Unvan.Find(Id); 
             return View(Unvan);
         }
 
@@ -88,5 +87,6 @@ namespace IkProjemCore3dot1.Areas.Admin.Controllers
             }
             return View(Unvan);
         }
+         
     }
 }

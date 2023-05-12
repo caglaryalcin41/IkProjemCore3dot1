@@ -26,8 +26,7 @@ namespace IkProjemCore3dot1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc(options => options.EnableEndpointRouting = false);
-            services.AddControllersWithViews();
-            services.AddRazorPages();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation(); 
             services.AddDbContext<PersonelContext>(
     options => options.UseSqlServer(Configuration.GetConnectionString("PersonelContext")));
         }
@@ -62,8 +61,7 @@ namespace IkProjemCore3dot1
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-                endpoints.MapRazorPages();
+                 
             });
         }
     }
