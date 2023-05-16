@@ -1,4 +1,4 @@
-﻿@model List<WebItem>
+﻿@model List<IkProjemCore3dot1.Areas.Admin.ViewModels.vm_MenuAuth>
 
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -7,7 +7,7 @@
         @foreach (var item in Model)
         {
             <li class="nav-item">
-                <a href="@Url.Action(item.ActionName,"Unvan","Admin")" class="nav-link">
+                <a href="@Url.Action(item.ActionName,item.ControllerName,item.AreaName)" class="nav-link">
                     <i class="nav-icon far fa-user"></i>
                     <p>
                         @item.ActionName

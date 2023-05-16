@@ -4,14 +4,16 @@ using IkProjemCore3dot1.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace IkProjemCore3dot1.Migrations
 {
     [DbContext(typeof(PersonelContext))]
-    partial class PersonelContextModelSnapshot : ModelSnapshot
+    [Migration("20230515184407_c5")]
+    partial class c5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -222,9 +224,6 @@ namespace IkProjemCore3dot1.Migrations
                     b.Property<DateTime?>("EditedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("KullaniciAdi")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Reserved1")
                         .HasColumnType("nvarchar(max)");
 
@@ -232,9 +231,6 @@ namespace IkProjemCore3dot1.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ReservedName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Sifre")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Soyadi")

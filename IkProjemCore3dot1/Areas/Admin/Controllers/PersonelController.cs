@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using IkProjemCore3dot1.Areas.Admin.Data;
 
 namespace IkProjemCore3dot1.Areas.Admin.Controllers
 {
@@ -27,7 +28,7 @@ namespace IkProjemCore3dot1.Areas.Admin.Controllers
             List<Personel> personels = db.Personel41.Include(x => x.Unvan2).ToList();
 
 
-
+            var adana = LoginUser.userRole;
 
             TempData["personel"] = "Çağlar Yalçın";
             return View(personels);

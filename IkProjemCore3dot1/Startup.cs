@@ -56,7 +56,7 @@ namespace IkProjemCore3dot1
                 endpoints.MapAreaControllerRoute(
                    name: "Admin",
                    areaName: "Admin",
-                   pattern: "Admin/{controller=Home}/{action=Index}");
+                   pattern: "Admin/{controller=Login}/{action=Login}");
 
                 endpoints.MapControllerRoute(
                     name: "default",

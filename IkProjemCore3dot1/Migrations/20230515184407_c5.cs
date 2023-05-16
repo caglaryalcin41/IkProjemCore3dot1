@@ -2,7 +2,7 @@
 
 namespace IkProjemCore3dot1.Migrations
 {
-    public partial class c2 : Migration
+    public partial class c5 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
