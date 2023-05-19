@@ -27,16 +27,20 @@ namespace IkProjemCore3dot1.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Login(vm_LoginViewModel model)
         {
-                 using var con = new SqlConnection(Configuration.GetConnectionString("PersonelContext"));
-            if (ModelState.IsValid)
+            if (model.KullaniciAdi != null && model.Sifre != null)
             {
-                vm_WebUserIds gelenRoleId = con.Query<vm_WebUserIds>($"select ct.RoleId as webItemId from [user] as u inner join ct_UserRole as ct on ct.UserId = u.Id where u.KullaniciAdi = '{model.KullaniciAdi}' and u.Sifre = '{model.Sifre}'").First();
-
-                if (gelenRoleId != null)
+                using var con = new SqlConnection(Configuration.GetConnectionString("PersonelContext"));
+                if (ModelState.IsValid)
                 {
-                    LoginUser.userRole = gelenRoleId.webItemId;
+                    vm_WebUserIds gelenRoleId = con.Query<vm_WebUserIds>($"select ct.RoleId as webItemId from [user] as u inner join ct_UserRole as ct on ct.UserId = u.Id where u.KullaniciAdi = '{model.KullaniciAdi}' and u.Sifre = '{model.Sifre}'").First();
+
+                    if (gelenRoleId != null)
+                    {
+                        LoginUser.userRole = gelenRoleId.webItemId;
+                    }
                 }
-            } 
+            }
+
             return RedirectToAction("KisiListesi", new {Area="Admin",Controller ="Personel"});
         }
 

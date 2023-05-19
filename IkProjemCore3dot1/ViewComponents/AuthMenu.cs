@@ -33,7 +33,7 @@ namespace IkProjemCore3dot1.ViewComponents
 
             int LoginUserRoleId = LoginUser.userRole;
 
-            List<vm_WebUserIds> userItems = con.Query<vm_WebUserIds>($"select webItemId from [ct_RolePrivilege] where RoleId = {LoginUserRoleId}").ToList();
+            List<vm_WebUserIds> userItems = con.Query<vm_WebUserIds>($"select webItemId from [ct_RolePrivilege] where AktifMi = 1 and RoleId = {LoginUserRoleId}").ToList();
             List<vm_MenuAuth> KullanıcıIzinliItemları = new List<vm_MenuAuth> { };
              
             foreach (var item in userItems)
